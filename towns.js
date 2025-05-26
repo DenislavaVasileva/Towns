@@ -46,6 +46,7 @@ function shuffleTowns() {
 
 $(document).ready(function() {
 	$('#btnShuffle').click(shuffleTowns);
+});
 
 function addTown() {
 	let townName = $('#townNameForAdd').val();
@@ -58,4 +59,3 @@ $(document).ready(function() {
 	$('#btnAdd').click(addTown);
 
 });
-
