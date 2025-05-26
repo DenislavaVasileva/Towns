@@ -18,6 +18,7 @@ function deleteTown() {
 		$('#result').text(townName + " not found.");
 }
 
+
 function shuffleTowns() {
 	let towns = $('#towns option').toArray();
 	$('#towns').empty();
@@ -37,4 +38,15 @@ function shuffleTowns() {
 
 $(document).ready(function() {
 	$('#btnShuffle').click(shuffleTowns);
+
+function addTown() {
+	let townName = $('#townNameForAdd').val();
+	$('#townNameForAdd').val('');
+	$('#towns').append($('<option>').text(townName));
+	$('#result').text(townName + " added.");
+}
+
+$(document).ready(function() {
+	$('#btnAdd').click(addTown);
+
 });
